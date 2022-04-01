@@ -2,7 +2,7 @@
  
 ## How it works
 
-![a red circle bouncing off the edges](https://i.imgur.com/6J2UIig.gif)
+![a red circle bouncing off the edges](https://i.imgur.com/Nf1Rmon.gif)
 *A red circle is bouncing off the edges and counting bounces*
 
 ## Requirements
