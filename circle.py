@@ -22,12 +22,12 @@ def count_edge_collisions(x, y, width, height):
 
 def print_edge_collisions(count):
     ''' Print the number of edge collisions to the console. '''
-    print("Edge collisions: " + str(count))
+    print(f"Edge collisions: {str(count)}")
 
 def display_edge_collisions_on_screen(count, screen):
     ''' Display the number of edge collisions on the screen. '''
     font = pygame.font.Font(None, 36)
-    text = font.render("Edge collisions: " + str(count), 1, (255, 255, 255))
+    text = font.render(f"Edge collisions: {str(count)}", 1, (255, 255, 255))
     textpos = text.get_rect()
     textpos.centerx = screen.get_rect().centerx
     textpos.centery = screen.get_rect().centery
@@ -50,7 +50,7 @@ def main():
 
     # Initialize Pygame
     pygame.init()
-    
+
     # Set the height and width of the screen
     width = 800
     height = 600
@@ -82,10 +82,9 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    pygame.quit()
-                    quit()
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+                pygame.quit()
+                quit()
 
         # Move the circle
         screen.fill((0,0,0))
